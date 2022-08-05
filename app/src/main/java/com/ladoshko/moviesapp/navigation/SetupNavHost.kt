@@ -1,11 +1,11 @@
 package com.ladoshko.moviesapp.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.ladoshko.moviesapp.MainViewModel
+import com.ladoshko.moviesapp.screens.DetailsScreen
 import com.ladoshko.moviesapp.screens.MainScreen
 import com.ladoshko.moviesapp.screens.SplashScreen
 import com.ladoshko.moviesapp.utils.Constans
@@ -28,8 +28,8 @@ fun SetupNavHost(navController: NavHostController, viewModel: MainViewModel) {
         composable(route = Screens.Main.route) {
             MainScreen(navController = navController, viewModel = viewModel)
         }
-        composable(route = Screens.Details.route) {
-
+        composable(route = Screens.Details.route + "/{id}") { backStackEntry ->
+            DetailsScreen(navController = navController, viewModel =viewModel, itemId = backStackEntry.arguments?.getString("id") ?: "1" )
         }
     }
 }
