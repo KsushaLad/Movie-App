@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -19,7 +20,6 @@ import androidx.navigation.NavController
 import com.ladoshko.moviesapp.MainViewModel
 import com.ladoshko.moviesapp.navigation.Screens
 import com.ladoshko.moviesapp.ui.theme.MoviesAppTheme
-import com.ladoshko.moviesapp.utils.Constans
 import kotlinx.coroutines.delay
 
 @Composable
@@ -50,7 +50,7 @@ fun Splash(alpha: Float) {
             modifier = Modifier
                 .size(120.dp)
                 .alpha(alpha = alpha),
-            imageVector = Icons.Default.PlayArrow,
+            imageVector = Icons.Default.Favorite,
             contentDescription = "",
             tint = Color.Black
         )
