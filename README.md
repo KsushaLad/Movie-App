@@ -1,6 +1,6 @@
 # Movie-App
 ## An application where you can find films for your smartphone for every taste.
-![Screenshot](Wallpaper_app.png)
+![Screenshot](screen1.png)
 ## This project uses:
 * Kotlin;
 * MVVM architecture;
